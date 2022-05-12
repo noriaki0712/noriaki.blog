@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "target": "es5",
+    "isolatedModules": true,
+    "module": "esnext",
+    "lib": ["DOM", "ESNext"],
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "strict": false,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*", "test/**/*", "stories/**/*", ".storybook/preview.ts", "custom.d.ts"]
+}

@@ -1,15 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-export default function FullWidthImage(props) {
-  const {
-    height = 400,
-    img,
-    title,
-    subheading,
-    imgPosition = "top left",
-  } = props;
+export default function FullWidthImage(props): JSX.Element {
+  const { height = 400, img, title, subheading, imgPosition = "top left" } = props
 
   return (
     <React.Fragment>
@@ -23,8 +16,8 @@ export default function FullWidthImage(props) {
         {img?.url ? (
           <img
             src={img}
-            objectFit={"cover"}
-            objectPosition={imgPosition}
+            // objectFit={"cover"}
+            // objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
               // You can set a maximum height for the image, if you wish.
@@ -32,10 +25,10 @@ export default function FullWidthImage(props) {
               width: "100%",
             }}
             // You can optionally force an aspect ratio for the generated image
-            aspectratio={3 / 1}
+            // aspectratio={3 / 1}
             // This is a presentational image, so the alt should be an empty string
             alt=""
-            formats={["auto", "webp", "avif"]}
+            // formats={["auto", "webp", "avif"]}
           />
         ) : (
           <GatsbyImage
@@ -47,12 +40,12 @@ export default function FullWidthImage(props) {
               // You can set a maximum height for the image, if you wish.
               maxHeight: height,
             }}
-            layout="fullWidth"
+            // layout="fullWidth"
             // You can optionally force an aspect ratio for the generated image
-            aspectratio={3 / 1}
+            // aspectratio={3 / 1}
             // This is a presentational image, so the alt should be an empty string
             alt=""
-            formats={["auto", "webp", "avif"]}
+            // formats={["auto", "webp", "avif"]}
           />
         )}
         {(title || subheading) && (
@@ -71,8 +64,7 @@ export default function FullWidthImage(props) {
               <h1
                 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
                 style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+                  boxShadow: "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
                   backgroundColor: "rgb(255, 68, 0)",
                   color: "white",
                   lineHeight: "1",
@@ -86,8 +78,7 @@ export default function FullWidthImage(props) {
               <h3
                 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
                 style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+                  boxShadow: "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
                   backgroundColor: "rgb(255, 68, 0)",
                   color: "white",
                   lineHeight: "1",
@@ -102,12 +93,5 @@ export default function FullWidthImage(props) {
         )}
       </div>
     </React.Fragment>
-  );
+  )
 }
-
-FullWidthImage.propTypes = {
-  img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  height: PropTypes.number,
-  subheading: PropTypes.string,
-};
