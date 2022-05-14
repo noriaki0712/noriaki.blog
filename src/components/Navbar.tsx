@@ -38,7 +38,12 @@ class Navbar extends React.Component<any, State> {
 
   render(): JSX.Element {
     return (
-      <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
+      <nav
+        className="navbar is-transparent"
+        role="navigation"
+        aria-label="main-navigation"
+        style={{ background: "rgb(0, 128, 255)" }}
+      >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
@@ -60,20 +65,12 @@ class Navbar extends React.Component<any, State> {
           </div>
           <div id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`}>
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item" to="/contact" style={{ color: "#ffffff", fontSize: "18px" }}>
                 Contact
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="navbar-item" href="https://github.com/noriaki0712" target="_blank" rel="noopener noreferrer">
                 <span className="icon">
                   <img src={github} alt="Github" />
                 </span>

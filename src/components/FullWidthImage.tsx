@@ -55,7 +55,6 @@ export default function FullWidthImage(props): JSX.Element {
               gridArea: "1/1",
               position: "relative",
               // This centers the other elements inside the hero component
-              placeItems: "center",
               display: "grid",
             }}
           >
@@ -64,10 +63,11 @@ export default function FullWidthImage(props): JSX.Element {
               <h1
                 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
                 style={{
-                  boxShadow: "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
+                  boxShadow: "rgb(0, 128, 255) 0.5rem 0px 0px, rgb(0, 128, 255) -0.5rem 0px 0px",
+                  backgroundColor: "rgb(0, 128, 255)",
                   color: "white",
-                  lineHeight: "1",
+                  textAlign: "center",
+                  lineHeight: "3",
                   padding: "0.25em",
                 }}
               >
