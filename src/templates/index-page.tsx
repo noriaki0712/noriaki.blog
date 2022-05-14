@@ -7,13 +7,14 @@ import { getImage } from "gatsby-plugin-image"
 import Features from "../components/Features"
 import FullWidthImage from "../components/FullWidthImage"
 import Layout from "../components/Layout"
+import BlogRoll from "../components/BlogRoll"
 
 export const IndexPageTemplate = ({ image, title, subheading, mainpitch, intro }: any) => {
   const heroImage = getImage(image) || image
   heroImage
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -28,14 +29,8 @@ export const IndexPageTemplate = ({ image, title, subheading, mainpitch, intro }
                       <h3 className="subtitle">{mainpitch.description}</h3>
                     </div>
                   </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
+                  <BlogRoll />
+                  {/* <Features gridItems={intro.blurbs} /> */}
                 </div>
               </div>
             </div>
@@ -91,18 +86,6 @@ export const pageQuery = graphql`
           description
         }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }

@@ -11,7 +11,7 @@ const TemplateWrapper = ({ children }: any) => {
   return (
     <React.Fragment>
       <Helmet>
-        <html lang="en" />
+        <html lang="ja" />
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -19,7 +19,7 @@ const TemplateWrapper = ({ children }: any) => {
         <link rel="icon" type="image/png" href={`${withPrefix("/")}img/favicon-32x32.png`} sizes="32x32" />
         <link rel="icon" type="image/png" href={`${withPrefix("/")}img/favicon-16x16.png`} sizes="16x16" />
 
-        <link rel="mask-icon" href={`${withPrefix("/")}img/safari-pinned-tab.svg`} color="#ff4400" />
+        <link rel="mask-icon" href={`${withPrefix("/")}img/safari-pinned-tab.svg`} color="#0084ff" />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
