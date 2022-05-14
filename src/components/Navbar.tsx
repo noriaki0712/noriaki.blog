@@ -68,6 +68,9 @@ class Navbar extends React.Component<any, State> {
               <Link className="navbar-item" to="/contact" style={{ color: "#ffffff", fontSize: "18px" }}>
                 Contact
               </Link>
+              <Link className="navbar-item" to="/profile" style={{ color: "#ffffff", fontSize: "18px" }}>
+                Profile
+              </Link>
             </div>
             <div className="navbar-end has-text-centered">
               <a className="navbar-item" href="https://github.com/noriaki0712" target="_blank" rel="noopener noreferrer">
